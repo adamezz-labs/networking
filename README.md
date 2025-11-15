@@ -7,7 +7,7 @@ I document my learning process through structured labs, Packet Tracer projects, 
 
 ## About Me
 
-- First-year university IT student  
+- second-year university IT student  
 - Currently studying:  
   - IPv4 subnetting & VLSM  
   - IPv6 addressing  
