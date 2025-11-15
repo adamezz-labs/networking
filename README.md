@@ -58,11 +58,6 @@ A collection of fully documented networking labs including:
 
 Repository: **networking-labs**
 
----
-
-## Contact
-GitHub: https://github.com/YOUR_USERNAME  
-Email: (add if you want)
 
 ---
 
