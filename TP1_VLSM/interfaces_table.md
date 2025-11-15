@@ -1,7 +1,7 @@
 # Interfaces and Assigned Addresses (TP1)
 
 | Device |  Description | Address | Mask | CIDR | Notes |
-|--------|-----------|-------------|---------|------|------|-------|
+|--------|-----------|-------------|---------|------|------|
 | BR1    |  BR1 — BR2 link | 192.168.33.249 | 255.255.255.252 | /30 | first usable in 192.168.33.248/30 |
 | BR1    |  BR1 LAN (40 hosts) | 192.168.33.129 | 255.255.255.192 | /26 | first usable in 192.168.33.128/26 |
 | BR2    | BR1 — BR2 link | 192.168.33.250 | 255.255.255.252 | /30 | second usable in link |
