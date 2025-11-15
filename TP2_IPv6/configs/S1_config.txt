@@ -1,0 +1,25 @@
+! S1 configuration (example - Cisco IOS)
+hostname S1
+no ip domain-lookup
+enable secret class
+service password-encryption
+line con 0
+ password cisco
+ login
+line vty 0 4
+ password cisco
+ login
+banner motd $ Unauthorized Access is Prohibited $
+
+! If needed, set SDM template prior to configuring SVI:
+! sdm prefer dual-ipv4-and-ipv6 default
+! reload
+
+interface Vlan1
+ description Management SVI for labs
+ ipv6 address 2001:db8:acad:1::b/64
+ ipv6 address fe80::b link-local
+ no shutdown
+
+! Save
+copy running-config startup-config
