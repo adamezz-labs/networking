@@ -1,0 +1,25 @@
+! BR1 configuration (example - Cisco IOS)
+hostname BR1
+no ip domain-lookup
+enable secret class
+service password-encryption
+line con 0
+ password cisco
+ login
+line vty 0 4
+ password cisco
+ login
+banner motd $ Unauthorized Access is Prohibited $
+
+interface GigabitEthernet0/1
+ description link to BR2
+ ip address 192.168.33.249 255.255.255.252
+ no shutdown
+
+interface GigabitEthernet0/0/
+ description BR1 LAN (40 hosts)
+ ip address 192.168.33.129 255.255.255.192
+ no shutdown
+
+! Save
+copy running-config startup-config

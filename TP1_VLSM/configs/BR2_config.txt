@@ -1,0 +1,30 @@
+! BR2 configuration
+hostname BR2
+no ip domain-lookup
+enable secret class
+service password-encryption
+line con 0
+ password cisco
+ login
+line vty 0 4
+ password cisco
+ login
+banner motd $ Unauthorized Access is Prohibited $
+
+interface GigabitEthernet0/0
+ description link to BR1
+ ip address 192.168.33.250 255.255.255.252
+ no shutdown
+
+interface GigabitEthernet0/1
+ description BR2 LAN (25 hosts)
+ ip address 192.168.33.193 255.255.255.224
+ no shutdown
+
+! Additional interfaces available (examples):
+! interface GigabitEthernet0/0/2
+!  description BR2 small LAN (5 hosts)
+!  ip address 192.168.33.225 255.255.255.248
+!  no shutdown
+
+copy running-config startup-config
