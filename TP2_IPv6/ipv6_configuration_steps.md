@@ -27,7 +27,7 @@
  ipv6 address 2001:db8:acad:1::3/64
  ipv6 address fe80::1 link-local
  no shutdown
-
+```
 
 interface GigabitEthernet0/1
  description LAN 1 / link to switch
