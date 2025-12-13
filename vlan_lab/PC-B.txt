@@ -1,0 +1,4 @@
+PC-B (VLAN 30)
+IP address: 192.168.30.13
+Subnet mask: 255.255.255.0
+Default gateway: 192.168.30.11

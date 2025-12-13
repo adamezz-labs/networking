@@ -1,0 +1,4 @@
+PC-C (VLAN 10)
+IP address: 192.168.10.14
+Subnet mask: 255.255.255.0
+Default gateway: 192.168.10.11

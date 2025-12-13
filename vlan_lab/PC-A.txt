@@ -1,0 +1,4 @@
+PC-A (VLAN 20)
+IP address: 192.168.20.12
+Subnet mask: 255.255.255.0
+Default gateway: 192.168.20.11

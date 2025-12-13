@@ -1,0 +1,44 @@
+enable
+configure terminal
+
+vlan 10
+ name gestion
+vlan 20
+ name commercial
+vlan 30
+ name operations
+vlan 999
+ name parkinglot
+vlan 1000
+ name natif
+
+interface vlan 10
+ ip address 192.168.10.11 255.255.255.0
+ no shutdown
+
+interface vlan 20
+ ip address 192.168.20.11 255.255.255.0
+ no shutdown
+
+interface vlan 30
+ ip address 192.168.30.11 255.255.255.0
+ no shutdown
+
+interface fastEthernet0/1
+ switchport mode access
+ switchport access vlan 20
+ no shutdown
+
+interface range fastEthernet0/3-24, gigabitEthernet0/1-2
+ switchport mode access
+ switchport access vlan 999
+ shutdown
+
+interface fastEthernet0/2
+ switchport mode trunk
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,30,1000
+ no shutdown
+
+end
+write memory
